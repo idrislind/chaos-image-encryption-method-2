@@ -1,0 +1,17 @@
+services:
+  chaos-image-method2:
+    build: .
+    container_name: chaos-image-method2
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "0.0.0.0:8502:8501"
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+    pids_limit: 128
+    mem_limit: 2g
+    init: true
+    tmpfs:
+      - /tmp:size=256m,mode=1777

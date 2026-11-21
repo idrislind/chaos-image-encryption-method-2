@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+keys/**/private.pem
+outputs/*
+!outputs/.gitkeep
+.env
+.streamlit/secrets.toml
+*.pem
